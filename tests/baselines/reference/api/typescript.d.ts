@@ -2448,6 +2448,10 @@ declare namespace ts {
         Jsx = ".jsx",
         Json = ".json",
     }
+    enum ConfigurationFile {
+        Js = "jsconfig.json",
+        Ts = "tsconfig.json",
+    }
     interface ResolvedModuleWithFailedLookupLocations {
         readonly resolvedModule: ResolvedModuleFull | undefined;
     }
