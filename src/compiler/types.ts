@@ -4363,6 +4363,11 @@ namespace ts {
         Json = ".json"
     }
 
+    export const enum ConfigurationFile {
+        Js = "jsconfig.json",
+        Ts = "tsconfig.json"
+    }
+
     export interface ResolvedModuleWithFailedLookupLocations {
         readonly resolvedModule: ResolvedModuleFull | undefined;
         /* @internal */

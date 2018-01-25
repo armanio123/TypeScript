@@ -748,9 +748,9 @@ namespace ts {
     export function deduplicate<T>(array: ReadonlyArray<T>, equalityComparer: EqualityComparer<T>, comparer?: Comparer<T>): T[] {
         return !array ? undefined :
             array.length === 0 ? [] :
-            array.length === 1 ? array.slice() :
-            comparer ? deduplicateRelational(array, equalityComparer, comparer) :
-            deduplicateEquality(array, equalityComparer);
+                array.length === 1 ? array.slice() :
+                    comparer ? deduplicateRelational(array, equalityComparer, comparer) :
+                        deduplicateEquality(array, equalityComparer);
     }
 
     /**
@@ -1002,15 +1002,17 @@ namespace ts {
 
     export function arrayIterator<T>(array: ReadonlyArray<T>): Iterator<T> {
         let i = 0;
-        return { next: () => {
-            if (i === array.length) {
-                return { value: undefined as never, done: true };
+        return {
+            next: () => {
+                if (i === array.length) {
+                    return { value: undefined as never, done: true };
+                }
+                else {
+                    i++;
+                    return { value: array[i - 1], done: false };
+                }
             }
-            else {
-                i++;
-                return { value: array[i - 1], done: false };
-            }
-        }};
+        };
     }
 
     /**
@@ -1679,9 +1681,9 @@ namespace ts {
     function compareComparableValues(a: string | number, b: string | number) {
         return a === b ? Comparison.EqualTo :
             a === undefined ? Comparison.LessThan :
-            b === undefined ? Comparison.GreaterThan :
-            a < b ? Comparison.LessThan :
-            Comparison.GreaterThan;
+                b === undefined ? Comparison.GreaterThan :
+                    a < b ? Comparison.LessThan :
+                        Comparison.GreaterThan;
     }
 
     /**
@@ -1847,8 +1849,8 @@ namespace ts {
     export function compareProperties<T, K extends keyof T>(a: T, b: T, key: K, comparer: Comparer<T[K]>) {
         return a === b ? Comparison.EqualTo :
             a === undefined ? Comparison.LessThan :
-            b === undefined ? Comparison.GreaterThan :
-            comparer(a[key], b[key]);
+                b === undefined ? Comparison.GreaterThan :
+                    comparer(a[key], b[key]);
     }
 
     function getDiagnosticFileName(diagnostic: Diagnostic): string {
@@ -2768,7 +2770,7 @@ namespace ts {
         }
     }
 
-    function Signature() {} // tslint:disable-line no-empty
+    function Signature() { } // tslint:disable-line no-empty
 
     function Node(this: Node, kind: SyntaxKind, pos: number, end: number) {
         this.id = 0;
@@ -3264,5 +3266,17 @@ namespace ts {
 
     export function singleElementArray<T>(t: T | undefined): T[] | undefined {
         return t === undefined ? undefined : [t];
+    }
+
+    export function isJsConfigurationFile(path: string): boolean {
+        return isConfigFile(path, ConfigurationFile.Js);
+    }
+
+    export function isTsConfigurationFile(path: string): boolean {
+        return isConfigFile(path, ConfigurationFile.Ts);
+    }
+
+    function isConfigFile(path: string, configurationFile: ConfigurationFile): boolean {
+        return getBaseFileName(path) === configurationFile;
     }
 }

@@ -1365,7 +1365,7 @@ namespace ts {
             for (let i = 0; i < nameColumn.length; i++) {
                 const optionName = nameColumn[i];
                 const description = descriptionColumn[i];
-                result.push(optionName && `${tab}${tab}${optionName}${ description && (makePadding(marginLength - optionName.length + 2) + description)}`);
+                result.push(optionName && `${tab}${tab}${optionName}${description && (makePadding(marginLength - optionName.length + 2) + description)}`);
             }
             if (fileNames.length) {
                 result.push(`${tab}},`);
@@ -1553,14 +1553,14 @@ namespace ts {
      * It does *not* resolve the included files.
      */
     function parseConfig(
-            json: any,
-            sourceFile: JsonSourceFile,
-            host: ParseConfigHost,
-            basePath: string,
-            configFileName: string,
-            getCanonicalFileName: GetCanonicalFileName,
-            resolutionStack: Path[],
-            errors: Push<Diagnostic>,
+        json: any,
+        sourceFile: JsonSourceFile,
+        host: ParseConfigHost,
+        basePath: string,
+        configFileName: string,
+        getCanonicalFileName: GetCanonicalFileName,
+        resolutionStack: Path[],
+        errors: Push<Diagnostic>,
     ): ParsedTsconfig {
         basePath = normalizeSlashes(basePath);
         const resolvedPath = toPath(configFileName || "", basePath, getCanonicalFileName);
@@ -1684,6 +1684,16 @@ namespace ts {
             }
         };
         const json = convertToObjectWorker(sourceFile, errors, getTsconfigRootOptionsMap(), optionsIterator);
+
+        if (isJsConfigurationFile(configFileName)) {
+            if (!json.include) {
+                json.include = [];
+            }
+
+            // Insert patterns at the beginning of the array so that user can use include correctly.
+            json.include.unshift(...supportedJavascriptExtensions.map(x => `**/*${x}`), `**/*${Extension.Dts}`);
+        }
+
         if (!typeAcquisition) {
             if (typingOptionstypeAcquisition) {
                 typeAcquisition = (typingOptionstypeAcquisition.enableAutoDiscovery !== undefined) ?
@@ -1794,7 +1804,7 @@ namespace ts {
     }
 
     function getDefaultCompilerOptions(configFileName?: string) {
-        const options: CompilerOptions = getBaseFileName(configFileName) === "jsconfig.json"
+        const options: CompilerOptions = isJsConfigurationFile(configFileName)
             ? { allowJs: true, maxNodeModuleJsDepth: 2, allowSyntheticDefaultImports: true, skipLibCheck: true }
             : {};
         return options;
@@ -1809,7 +1819,7 @@ namespace ts {
     }
 
     function getDefaultTypeAcquisition(configFileName?: string): TypeAcquisition {
-        return { enable: getBaseFileName(configFileName) === "jsconfig.json", include: [], exclude: [] };
+        return { enable: isJsConfigurationFile(configFileName), include: [], exclude: [] };
     }
 
     function convertTypeAcquisitionFromJsonWorker(jsonOptions: any,
