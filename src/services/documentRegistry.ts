@@ -109,7 +109,7 @@ namespace ts {
         const getCanonicalFileName = createGetCanonicalFileName(!!useCaseSensitiveFileNames);
 
         function getKeyForCompilationSettings(settings: CompilerOptions): DocumentRegistryBucketKey {
-            return <DocumentRegistryBucketKey>`_${settings.target}|${settings.module}|${settings.noResolve}|${settings.jsx}|${settings.allowJs}|${settings.baseUrl}|${JSON.stringify(settings.typeRoots)}|${JSON.stringify(settings.rootDirs)}|${JSON.stringify(settings.paths)}`;
+            return <DocumentRegistryBucketKey>`_${settings.target}|${settings.module}|${settings.noResolve}|${settings.jsx}|${settings.allowJs}|${settings.allowTs}|${settings.baseUrl}|${JSON.stringify(settings.typeRoots)}|${JSON.stringify(settings.rootDirs)}|${JSON.stringify(settings.paths)}`;
         }
 
         function getBucketForCompilationSettings(key: DocumentRegistryBucketKey, createIfMissing: boolean): Map<DocumentRegistryEntry> {

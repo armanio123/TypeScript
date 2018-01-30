@@ -470,6 +470,7 @@ namespace ts {
             oldOptions.noResolve !== newOptions.noResolve ||
             oldOptions.jsx !== newOptions.jsx ||
             oldOptions.allowJs !== newOptions.allowJs ||
+            oldOptions.allowTs !== newOptions.allowTs ||
             oldOptions.disableSizeLimit !== newOptions.disableSizeLimit ||
             oldOptions.baseUrl !== newOptions.baseUrl ||
             !equalOwnProperties(oldOptions.paths, newOptions.paths)

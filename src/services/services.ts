@@ -928,7 +928,8 @@ namespace ts {
         // Always default to "ScriptTarget.ES5" for the language service
         return {
             target: ScriptTarget.ES5,
-            jsx: JsxEmit.Preserve
+            jsx: JsxEmit.Preserve,
+            allowTs: true
         };
     }
 

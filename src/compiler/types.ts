@@ -3955,6 +3955,7 @@ namespace ts {
     export interface CompilerOptions {
         /*@internal*/ all?: boolean;
         allowJs?: boolean;
+        /*@internal*/ allowTs?: boolean;
         /*@internal*/ allowNonTsExtensions?: boolean;
         allowSyntheticDefaultImports?: boolean;
         allowUnreachableCode?: boolean;

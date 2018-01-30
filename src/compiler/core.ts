@@ -761,9 +761,9 @@ namespace ts {
     export function deduplicate<T>(array: ReadonlyArray<T>, equalityComparer: EqualityComparer<T>, comparer?: Comparer<T>): T[] {
         return !array ? undefined :
             array.length === 0 ? [] :
-            array.length === 1 ? array.slice() :
-            comparer ? deduplicateRelational(array, equalityComparer, comparer) :
-            deduplicateEquality(array, equalityComparer);
+                array.length === 1 ? array.slice() :
+                    comparer ? deduplicateRelational(array, equalityComparer, comparer) :
+                        deduplicateEquality(array, equalityComparer);
     }
 
     /**
@@ -827,6 +827,7 @@ namespace ts {
             (oldOptions.noLib !== newOptions.noLib) ||
             (oldOptions.jsx !== newOptions.jsx) ||
             (oldOptions.allowJs !== newOptions.allowJs) ||
+            (oldOptions.allowTs !== newOptions.allowTs) ||
             (oldOptions.rootDir !== newOptions.rootDir) ||
             (oldOptions.configFilePath !== newOptions.configFilePath) ||
             (oldOptions.baseUrl !== newOptions.baseUrl) ||
@@ -1696,9 +1697,9 @@ namespace ts {
     function compareComparableValues(a: string | number, b: string | number) {
         return a === b ? Comparison.EqualTo :
             a === undefined ? Comparison.LessThan :
-            b === undefined ? Comparison.GreaterThan :
-            a < b ? Comparison.LessThan :
-            Comparison.GreaterThan;
+                b === undefined ? Comparison.GreaterThan :
+                    a < b ? Comparison.LessThan :
+                        Comparison.GreaterThan;
     }
 
     /**
@@ -1864,8 +1865,8 @@ namespace ts {
     export function compareProperties<T, K extends keyof T>(a: T, b: T, key: K, comparer: Comparer<T[K]>) {
         return a === b ? Comparison.EqualTo :
             a === undefined ? Comparison.LessThan :
-            b === undefined ? Comparison.GreaterThan :
-            comparer(a[key], b[key]);
+                b === undefined ? Comparison.GreaterThan :
+                    comparer(a[key], b[key]);
     }
 
     function getDiagnosticFileName(diagnostic: Diagnostic): string {
@@ -2638,18 +2639,23 @@ namespace ts {
     /** Must have ".d.ts" first because if ".ts" goes first, that will be detected as the extension instead of ".d.ts". */
     export const supportedTypescriptExtensionsForExtractExtension: ReadonlyArray<Extension> = [Extension.Dts, Extension.Ts, Extension.Tsx];
     export const supportedJavascriptExtensions: ReadonlyArray<Extension> = [Extension.Js, Extension.Jsx];
-    const allSupportedExtensions: ReadonlyArray<Extension> = [...supportedTypeScriptExtensions, ...supportedJavascriptExtensions];
 
     export function getSupportedExtensions(options?: CompilerOptions, extraFileExtensions?: ReadonlyArray<JsFileExtensionInfo>): ReadonlyArray<string> {
-        const needAllExtensions = options && options.allowJs;
-        if (!extraFileExtensions || extraFileExtensions.length === 0 || !needAllExtensions) {
-            return needAllExtensions ? allSupportedExtensions : supportedTypeScriptExtensions;
+
+        const extensions: string[] = [Extension.Dts];
+
+        if (!options || options.allowTs || options.allowTs === undefined && options.allowJs === undefined) {
+            extensions.push(...supportedTypeScriptExtensions);
         }
-        return deduplicate(
-            [...allSupportedExtensions, ...extraFileExtensions.map(e => e.extension)],
-            equateStringsCaseSensitive,
-            compareStringsCaseSensitive
-        );
+        if (options && options.allowJs) {
+            extensions.push(...supportedJavascriptExtensions);
+
+            if (extraFileExtensions && extraFileExtensions.length !== 0) {
+                extensions.push(...extraFileExtensions.map(e => e.extension));
+            }
+        }
+
+        return deduplicate(extensions, equateStringsCaseSensitive, compareStringsCaseSensitive);
     }
 
     export function hasJavaScriptFileExtension(fileName: string) {

@@ -161,6 +161,13 @@ namespace ts {
             description: Diagnostics.Allow_javascript_files_to_be_compiled
         },
         {
+            name: "allowTs",
+            type: "boolean",
+            showInSimplifiedHelpView: true,
+            category: Diagnostics.Basic_Options,
+            description: Diagnostics.Allow_javascript_files_to_be_compiled
+        },
+        {
             name: "checkJs",
             type: "boolean",
             category: Diagnostics.Basic_Options,
@@ -718,7 +725,8 @@ namespace ts {
         module: ModuleKind.CommonJS,
         target: ScriptTarget.ES5,
         strict: true,
-        esModuleInterop: true
+        esModuleInterop: true,
+        allowTs: true
     };
 
     let optionNameMapCache: OptionNameMap;
@@ -1802,7 +1810,7 @@ namespace ts {
     function getDefaultCompilerOptions(configFileName?: string) {
         const options: CompilerOptions = getBaseFileName(configFileName) === "jsconfig.json"
             ? { allowJs: true, maxNodeModuleJsDepth: 2, allowSyntheticDefaultImports: true, skipLibCheck: true }
-            : {};
+            : { allowTs: true };
         return options;
     }
 

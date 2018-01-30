@@ -965,6 +965,7 @@ namespace ts.server {
 
         setCompilerOptions(compilerOptions: CompilerOptions) {
             if (compilerOptions) {
+                compilerOptions.allowTs = true;
                 compilerOptions.allowNonTsExtensions = true;
                 if (changesAffectModuleResolution(this.compilerOptions, compilerOptions)) {
                     // reset cached unresolved imports if changes in compiler options affected module resolution
