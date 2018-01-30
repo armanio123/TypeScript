@@ -188,7 +188,7 @@ namespace ts.projectSystem {
             assert.deepEqual(this.getEvent<server.ProjectInfoTelemetryEvent>(ts.server.ProjectInfoTelemetryEvent), {
                 projectId: Harness.mockHash(configFile || "/tsconfig.json"),
                 fileStats: fileStats({ ts: 1 }),
-                compilerOptions: {},
+                compilerOptions: { allowTs: true },
                 extends: false,
                 files: false,
                 include: false,
@@ -720,7 +720,7 @@ namespace ts.projectSystem {
                 path: "/c/app.ts",
                 content: "let x = 1"
             };
-            const makeProject = (f: FileOrFolder) => ({ projectFileName: f.path + ".csproj", rootFiles: [toExternalFile(f.path)], options: {} });
+            const makeProject = (f: FileOrFolder) => ({ projectFileName: f.path + ".csproj", rootFiles: [toExternalFile(f.path)], options: { allowTs: true } });
             const p1 = makeProject(f1);
             const p2 = makeProject(f2);
             const p3 = makeProject(f3);

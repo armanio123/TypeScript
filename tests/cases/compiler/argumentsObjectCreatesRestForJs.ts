@@ -1,5 +1,6 @@
 // @checkJs: true
 // @allowJs: true
+// @allowTs: true
 // @Filename: main.js
 // @noemit: true
 function allRest() { arguments; }

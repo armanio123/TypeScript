@@ -7,6 +7,7 @@
 //// var x;
 
 // @allowJs: true
+// @allowTs: true
 // @Filename: test.ts
 //// /**
 ////  * @type {number}

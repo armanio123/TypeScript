@@ -1,6 +1,7 @@
 /// <reference path="fourslash.ts" />
 
 // @allowJs: true
+// @allowTs: true
 
 // @Filename: /node_modules/@types/abs/index.d.ts
 ////declare function abs(str: string): string;

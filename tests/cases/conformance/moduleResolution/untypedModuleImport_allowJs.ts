@@ -1,6 +1,7 @@
 // @noImplicitReferences: true
 // @currentDirectory: /
 // @allowJs: true
+// @allowTs: true
 // @maxNodeModuleJsDepth: 1
 // Same as untypedModuleImport.ts but with --allowJs, so the package will actually be typed.
 

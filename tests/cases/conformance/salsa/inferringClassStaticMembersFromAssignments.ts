@@ -1,5 +1,6 @@
 // @noEmit: true
 // @allowJs: true
+// @allowTs: true
 
 // @filename: a.js
 export class C1 { }

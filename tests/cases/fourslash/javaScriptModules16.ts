@@ -3,6 +3,7 @@
 // Assignments to 'exports.p' define a property 'p'
 
 // @allowJs: true
+// @allowTs: true
 // @Filename: myMod.js
 //// exports.n = 3;
 //// exports.s = 'foo';

@@ -1,6 +1,7 @@
 ///<reference path="fourslash.ts" />
 
 // @allowJs: true
+// @allowTs: true
 // @Filename: Foo.js
 //// /** @/*1*/ */
 //// var v1;

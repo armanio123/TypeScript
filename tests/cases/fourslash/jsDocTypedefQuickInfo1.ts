@@ -1,5 +1,6 @@
 ﻿/// <reference path="fourslash.ts" />
 // @allowJs: true
+// @allowTs: true
 // @Filename: jsDocTypedef1.js
 //// /**
 ////  * @typedef {Object} Opts

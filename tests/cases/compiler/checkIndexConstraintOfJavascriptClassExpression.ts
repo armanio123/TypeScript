@@ -1,5 +1,6 @@
 // @Filename: weird.js
 // @allowJs: true
+// @allowTs: true
 // @checkJs: true
 // @strict: true
 // @noEmit: true

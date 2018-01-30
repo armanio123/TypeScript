@@ -1,4 +1,5 @@
 // @allowJs: true
+// @allowTs: true
 // @out: apply.js
 // @module: amd
 

@@ -1,4 +1,5 @@
 // @allowJs: true
+// @allowTs: true
 // @outDir: ./built
 // @filename: library.d.ts
 export class Foo<T = {}, U = {}> {

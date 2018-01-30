@@ -1,6 +1,7 @@
 /// <reference path="fourslash.ts"/>
 
 // @allowJs: true
+// @allowTs: true
 // @Filename: /a.js
 ////exports.{| "name": "x", "kind": "const" |}x = 0;
 ////exports.{| "name": "y", "kind": "function" |}y = function() {};

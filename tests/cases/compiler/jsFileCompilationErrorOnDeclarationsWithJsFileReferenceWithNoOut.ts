@@ -1,4 +1,5 @@
 // @allowJs: true
+// @allowTs: true
 // @declaration: true
 // @filename: a.ts
 class c {

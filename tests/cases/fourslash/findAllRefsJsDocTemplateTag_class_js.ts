@@ -1,6 +1,7 @@
 /// <reference path='fourslash.ts'/>
 
 // @allowJs: true
+// @allowTs: true
 // @Filename: /a.js
 
 // TODO: https://github.com/Microsoft/TypeScript/issues/16411

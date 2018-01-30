@@ -1,4 +1,5 @@
 // @allowJs: true
+// @allowTs: true
 // @checkJs: true
 // @noEmit: true
 // regression test for #18254

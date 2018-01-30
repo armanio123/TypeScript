@@ -1,5 +1,6 @@
 // @checkJs: true
 // @allowJs: true
+// @allowTs: true
 // @noEmit: true
 
 // @Filename: dummyType.d.ts

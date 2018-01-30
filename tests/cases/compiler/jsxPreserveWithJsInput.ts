@@ -1,6 +1,7 @@
 // @outdir: out
 // @jsx: preserve
-// @allowjs: true
+// @allowJs: true
+// @allowTs: true
 
 // @filename: a.js
 var elemA = 42;

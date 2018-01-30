@@ -1,4 +1,5 @@
-// @allowJS: true
+// @allowJs: true
+// @allowTs: true
 // @target: es2015
 // @module: es2015
 

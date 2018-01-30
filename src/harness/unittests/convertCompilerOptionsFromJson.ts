@@ -68,6 +68,7 @@ namespace ts {
                 }, "tsconfig.json",
                 {
                     compilerOptions: {
+                        allowTs: true,
                         module: ModuleKind.CommonJS,
                         target: ScriptTarget.ES5,
                         noImplicitAny: false,
@@ -93,6 +94,7 @@ namespace ts {
                 }, "tsconfig.json",
                 {
                     compilerOptions: {
+                        allowTs: true,
                         module: ModuleKind.CommonJS,
                         target: ScriptTarget.ES5,
                         noImplicitAny: false,
@@ -118,6 +120,7 @@ namespace ts {
                 }, "tsconfig.json",
                 {
                     compilerOptions: {
+                        allowTs: true,
                         module: ModuleKind.CommonJS,
                         target: ScriptTarget.ES5,
                         noImplicitAny: false,
@@ -147,6 +150,7 @@ namespace ts {
                 }, "tsconfig.json",
                 {
                     compilerOptions: {
+                        allowTs: true,
                         target: ScriptTarget.ES5,
                         noImplicitAny: false,
                         sourceMap: false,
@@ -175,6 +179,7 @@ namespace ts {
                 }, "tsconfig.json",
                 {
                     compilerOptions: {
+                        allowTs: true,
                         target: ScriptTarget.ES5,
                         noImplicitAny: false,
                         sourceMap: false,
@@ -202,6 +207,7 @@ namespace ts {
                 }, "tsconfig.json",
                 {
                     compilerOptions: {
+                        allowTs: true,
                         noImplicitAny: false,
                         sourceMap: false,
                     },
@@ -228,6 +234,7 @@ namespace ts {
                 }, "tsconfig.json",
                 {
                     compilerOptions: {
+                        allowTs: true,
                         noImplicitAny: false,
                         sourceMap: false,
                     },
@@ -256,6 +263,7 @@ namespace ts {
                 }, "tsconfig.json",
                 {
                     compilerOptions: {
+                        allowTs: true,
                         module: ModuleKind.CommonJS,
                         target: ScriptTarget.ES5,
                         noImplicitAny: false,
@@ -287,6 +295,7 @@ namespace ts {
                 }, "tsconfig.json",
                 {
                     compilerOptions: {
+                        allowTs: true,
                         module: ModuleKind.CommonJS,
                         target: ScriptTarget.ES5,
                         noImplicitAny: false,
@@ -318,6 +327,7 @@ namespace ts {
                 }, "tsconfig.json",
                 {
                     compilerOptions: {
+                        allowTs: true,
                         module: ModuleKind.CommonJS,
                         target: ScriptTarget.ES5,
                         noImplicitAny: false,
@@ -349,6 +359,7 @@ namespace ts {
                 }, "tsconfig.json",
                 {
                     compilerOptions: {
+                        allowTs: true,
                         module: ModuleKind.CommonJS,
                         target: ScriptTarget.ES5,
                         noImplicitAny: false,
@@ -380,6 +391,7 @@ namespace ts {
                 }, "tsconfig.json",
                 {
                     compilerOptions: {
+                        allowTs: true,
                         module: ModuleKind.CommonJS,
                         target: ScriptTarget.ES5,
                         noImplicitAny: false,
@@ -399,7 +411,7 @@ namespace ts {
                     }
                 }, "tsconfig.json",
                 {
-                    compilerOptions: {},
+                    compilerOptions: { allowTs: true },
                     errors: [{
                         file: undefined,
                         start: 0,
@@ -415,7 +427,7 @@ namespace ts {
         it("Convert default tsconfig.json to compiler-options ", () => {
             assertCompilerOptions({}, "tsconfig.json",
                 {
-                    compilerOptions: {},
+                    compilerOptions: { allowTs: true },
                     errors: []
                 }
             );
@@ -431,6 +443,7 @@ namespace ts {
                 }, "tsconfig.json",
                 {
                     compilerOptions: {
+                        allowTs: true,
                         allowJs: true,
                         maxNodeModuleJsDepth: -1
                     },

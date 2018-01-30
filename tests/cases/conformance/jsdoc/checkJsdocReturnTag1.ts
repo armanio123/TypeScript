@@ -1,4 +1,5 @@
 // @allowJs: true
+// @allowTs: true
 // @out: dummy.js
 
 // @filename: returns.js

@@ -3,6 +3,7 @@
 // Should give completions for js files in node modules when allowJs is set to true
 
 // @allowJs: true
+// @allowTs: true
 
 // @Filename: tests/test0.ts
 //// import * as foo1 from "fake-module//*import_as0*/

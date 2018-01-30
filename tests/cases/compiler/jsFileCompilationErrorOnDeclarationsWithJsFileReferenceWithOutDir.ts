@@ -1,4 +1,5 @@
 // @allowJs: true
+// @allowTs: true
 // @declaration: true
 // @outDir: outDir
 // @filename: a.ts

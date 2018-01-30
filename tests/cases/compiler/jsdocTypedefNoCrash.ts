@@ -1,5 +1,6 @@
 // @target: es6
 // @allowJs: true
+// @allowTs: true
 // @outDir: ./dist
 // @filename: export.js
 /**

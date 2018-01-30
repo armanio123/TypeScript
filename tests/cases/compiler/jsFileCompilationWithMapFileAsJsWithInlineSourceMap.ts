@@ -1,4 +1,5 @@
 // @allowJs: true
+// @allowTs: true
 // @inlineSourceMap: true
 
 // @filename: a.ts

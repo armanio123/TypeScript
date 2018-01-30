@@ -1,5 +1,6 @@
 // @noUnusedLocals: true
 // @allowJs: true
+// @allowTs: true
 // @checkJs: true
 // @noEmit: true
 

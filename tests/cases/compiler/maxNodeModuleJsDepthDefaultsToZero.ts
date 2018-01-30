@@ -1,6 +1,7 @@
 // @module: commonjs
 // @moduleResolution: node
 // @allowJs: true
+// @allowTs: true
 // @traceResolution: true
 // @noEmit: true
 

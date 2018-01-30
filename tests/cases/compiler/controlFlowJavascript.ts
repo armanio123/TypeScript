@@ -1,4 +1,5 @@
 // @allowJs: true
+// @allowTs: true
 // @Filename: controlFlowJavascript.js
 // @out: out.js
 

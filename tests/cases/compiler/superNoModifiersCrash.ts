@@ -1,4 +1,5 @@
-// @allowjs: true
+// @allowJs: true
+// @allowTs: true
 // @outDir: ../
 // @filename: File.js
 class Parent {

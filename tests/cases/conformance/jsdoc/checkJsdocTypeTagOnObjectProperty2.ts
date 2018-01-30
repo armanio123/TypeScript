@@ -1,4 +1,5 @@
-// @allowJS: true
+// @allowJs: true
+// @allowTs: true
 // @suppressOutputPathCheck: true
 // @strictNullChecks: true
 

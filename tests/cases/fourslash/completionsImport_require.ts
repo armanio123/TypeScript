@@ -1,6 +1,7 @@
 /// <reference path="fourslash.ts" />
 
 // @allowJs: true
+// @allowTs: true
 
 // @Filename: /a.ts
 ////export const foo = 0;

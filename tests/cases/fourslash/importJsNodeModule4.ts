@@ -1,6 +1,7 @@
 ///<reference path="fourslash.ts" />
 
 // @allowJs: true
+// @allowTs: true
 
 // @Filename: node_modules/myMod/index.js
 //// module.exports = { n: 3, s: 'foo', b: true };

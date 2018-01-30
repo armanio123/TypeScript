@@ -3,6 +3,7 @@
 // Assignments to 'exports.p' stop global variables from being visible in other files
 
 // @allowJs: true
+// @allowTs: true
 // @Filename: myMod.js
 //// if (true) {
 ////     exports.b = true;

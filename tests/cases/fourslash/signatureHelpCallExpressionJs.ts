@@ -2,6 +2,7 @@
 
 // @checkJs: true
 // @allowJs: true
+// @allowTs: true
 
 // @Filename: main.js
 ////function allOptional() { arguments; }

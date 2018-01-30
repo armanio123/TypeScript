@@ -1,4 +1,5 @@
 // @allowJs: true
+// @allowTs: true
 // @noEmit: true
 // @checkJs: true
 // @filename: index.js

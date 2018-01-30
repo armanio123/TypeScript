@@ -1,5 +1,6 @@
 // @noEmit: true
 // @allowJs: true
+// @allowTs: true
 // @checkJs: true
 // @skipLibCheck: true
 // @lib: es2017, dom

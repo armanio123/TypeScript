@@ -1,6 +1,7 @@
 // @experimentaldecorators: true
 // @emitdecoratormetadata: true
-// @allowjs: true
+// @allowJs: true
+// @allowTs: true
 // @noEmit: true
 
 // @filename: a.js

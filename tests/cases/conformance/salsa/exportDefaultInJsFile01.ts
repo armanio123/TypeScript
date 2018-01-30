@@ -1,4 +1,5 @@
-// @allowJS: true
+// @allowJs: true
+// @allowTs: true
 // @target: es3
 // @module: commonjs
 

@@ -1,6 +1,7 @@
 /// <reference path="../fourslash.ts" />
 
 // @allowJs: true
+// @allowTs: true
 // @Filename: b.js
 //// var a = "a";
 //// var b: boolean = true;

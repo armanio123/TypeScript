@@ -1,4 +1,5 @@
-// @allowJS: true
+// @allowJs: true
+// @allowTs: true
 // @outDir: ./out
 // @module: commonjs
 // @noEmitHelpers: true

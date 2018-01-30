@@ -1,4 +1,5 @@
 // @allowJs: true
+// @allowTs: true
 // @noEmit: true
 
 // @fileName: a.js

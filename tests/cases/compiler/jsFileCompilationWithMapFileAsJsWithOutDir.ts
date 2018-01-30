@@ -1,4 +1,5 @@
 // @allowJs: true,map
+// @allowTs: true
 // @sourcemap: true
 // @outdir: out
 

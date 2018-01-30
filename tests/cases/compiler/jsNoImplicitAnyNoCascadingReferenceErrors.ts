@@ -1,4 +1,5 @@
 // @allowJs: true
+// @allowTs: true
 // @checkJs: true
 // @noImplicitAny: true
 // @outDir: ./built

@@ -1,6 +1,7 @@
 /// <reference path='fourslash.ts'/>
 
 // @allowJs: true
+// @allowTs: true
 // @Filename: a.js
 ////module.exports = class [|{| "isWriteAccess": true, "isDefinition": true |}A|] {}
 

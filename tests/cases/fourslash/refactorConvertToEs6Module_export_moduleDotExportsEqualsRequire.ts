@@ -1,6 +1,7 @@
 /// <reference path='fourslash.ts' />
 
 // @allowJs: true
+// @allowTs: true
 
 // @Filename: /a.d.ts
 ////export const x: number;

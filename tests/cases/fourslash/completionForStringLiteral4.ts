@@ -1,5 +1,6 @@
 /// <reference path='fourslash.ts'/>
 // @allowJs: true
+// @allowTs: true
 // @Filename: in.js
 /////** I am documentation
 //// * @param {'literal'} p1

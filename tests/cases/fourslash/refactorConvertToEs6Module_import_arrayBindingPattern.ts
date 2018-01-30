@@ -1,6 +1,7 @@
 /// <reference path='fourslash.ts' />
 
 // @allowJs: true
+// @allowTs: true
 
 // @Filename: /a.js
 ////const [x, y] = /*a*/require/*b*/("x");

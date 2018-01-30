@@ -2,6 +2,7 @@
 
 // @checkJs: true
 // @allowJs: true
+// @allowTs: true
 
 // @Filename: a.js
 ////class C {

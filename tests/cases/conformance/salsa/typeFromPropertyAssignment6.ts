@@ -1,5 +1,6 @@
 // @noEmit: true
 // @allowJs: true
+// @allowTs: true
 // @checkJs: true
 // @target: es6
 // @Filename: def.js

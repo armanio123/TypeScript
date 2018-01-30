@@ -1,5 +1,6 @@
 ///<reference path="fourslash.ts" />
 // @allowJs: true
+// @allowTs: true
 // @Filename: Foo.js
 /////** first line of the comment
 ////

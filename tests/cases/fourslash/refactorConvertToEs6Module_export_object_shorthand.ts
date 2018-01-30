@@ -3,6 +3,7 @@
 // TODO: Maybe we could transform this to `export function f() {}`.
 
 // @allowJs: true
+// @allowTs: true
 
 // @Filename: /a.js
 ////function f() {}

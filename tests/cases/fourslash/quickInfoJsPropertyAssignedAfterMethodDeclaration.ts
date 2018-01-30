@@ -4,6 +4,7 @@
 
 // @noLib: true
 // @allowJs: true
+// @allowTs: true
 // @noImplicitThis: true
 
 // @Filename: /a.js

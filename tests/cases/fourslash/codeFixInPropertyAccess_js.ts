@@ -1,6 +1,7 @@
 /// <reference path='fourslash.ts' />
 
 // @allowJs: true
+// @allowTs: true
 // @checkJs: true
 
 // @Filename: /a.js

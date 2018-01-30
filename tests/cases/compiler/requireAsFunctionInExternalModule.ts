@@ -1,4 +1,5 @@
-// @allowjs: true
+// @allowJs: true
+// @allowTs: true
 // @outDir: dist
 // @Filename: c.js
 export default function require(a) { }

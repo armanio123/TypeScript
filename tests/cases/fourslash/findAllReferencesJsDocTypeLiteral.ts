@@ -1,4 +1,5 @@
 // @allowJs: true
+// @allowTs: true
 // @checkJs: true
 /// <reference path='fourslash.ts' />
 

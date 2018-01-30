@@ -1,6 +1,7 @@
 /// <reference path='fourslash.ts'/>
 
 // @allowJs: true
+// @allowTs: true
 // @Filename: a.js
 //// function MyObject(){
 ////     this.__property = 1;

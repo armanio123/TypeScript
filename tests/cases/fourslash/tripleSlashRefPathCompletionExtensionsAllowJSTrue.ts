@@ -3,6 +3,7 @@
 // Should give completions for relative references to ts and js files when allowJs is true.
 
 // @allowJs: true
+// @allowTs: true
 
 // @Filename: test0.ts
 //// /// <reference path="/*0*/

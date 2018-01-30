@@ -3,6 +3,7 @@
 // Test that we leave it alone if the name is a keyword.
 
 // @allowJs: true
+// @allowTs: true
 
 // @Filename: /a.js
 ////const x = /*a*/require/*b*/("x"), y = 0, { z } = require("z");

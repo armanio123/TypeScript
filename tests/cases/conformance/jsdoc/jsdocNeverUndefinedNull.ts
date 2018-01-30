@@ -1,4 +1,5 @@
 // @allowJs: true
+// @allowTs: true
 // @filename: in.js
 // @out: out.js
 /**

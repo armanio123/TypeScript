@@ -3,6 +3,7 @@
 // Assignments to 'module.exports' create an external module
 
 // @allowJs: true
+// @allowTs: true
 // @Filename: myMod.js
 //// var x = { a: 10 };
 //// module.exports = x;

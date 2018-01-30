@@ -2,6 +2,7 @@
 
 // @Filename: a.js
 // @allowJs: true
+// @allowTs: true
 ////___foo; __foo;/**/
 
 goTo.marker();

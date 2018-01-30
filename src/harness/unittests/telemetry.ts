@@ -36,7 +36,7 @@ namespace ts.projectSystem {
         it("counts files by extension", () => {
             const files = ["ts.ts", "tsx.tsx", "moo.ts", "dts.d.ts", "jsx.jsx", "js.js", "badExtension.badExtension"].map(f => makeFile(`/src/${f}`));
             const notIncludedFile = makeFile("/bin/ts.js");
-            const compilerOptions: ts.CompilerOptions = { allowJs: true };
+            const compilerOptions: ts.CompilerOptions = { allowJs: true, allowTs: true };
             const tsconfig = makeFile("/tsconfig.json", { compilerOptions, include: ["src"] });
 
             const et = new TestServerEventManager([...files, notIncludedFile, tsconfig]);
@@ -123,6 +123,7 @@ namespace ts.projectSystem {
                 checkJs: "hunter2" as any as boolean,
             };
             const safeCompilerOptions: ts.CompilerOptions = {
+                allowTs: true,
                 project: "",
                 outFile: "",
                 outDir: "",
@@ -160,7 +161,7 @@ namespace ts.projectSystem {
         it("sends telemetry for extends, files, include, exclude, and compileOnSave", () => {
             const file = makeFile("/hunter2/a.ts");
             const tsconfig = makeFile("/tsconfig.json", {
-                compilerOptions: {},
+                compilerOptions: { allowTs: true },
                 extends: "hunter2.json",
                 files: ["hunter2/a.ts"],
                 include: ["hunter2"],

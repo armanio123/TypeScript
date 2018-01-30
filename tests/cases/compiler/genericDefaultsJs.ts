@@ -1,5 +1,6 @@
 // @checkJs: true
 // @allowJs: true
+// @allowTs: true
 // @noEmit: true
 // @filename: decls.d.ts
 declare function f0<T>(x?: T): T;

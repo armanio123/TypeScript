@@ -1,4 +1,5 @@
 // @allowJs: true
+// @allowTs: true
 // @module: amd
 // @out: a_out.js
 

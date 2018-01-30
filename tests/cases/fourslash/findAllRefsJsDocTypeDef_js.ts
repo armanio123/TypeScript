@@ -3,6 +3,7 @@
 // Tests that the scope of @typedef is not just the node immediately below it.
 
 // @allowJs: true
+// @allowTs: true
 
 // @Filename: /a.js
 /////** @typedef {number} [|{| "isWriteAccess": true, "isDefinition": true |}T|] */

@@ -3,6 +3,7 @@
 // Should give completions for ts and js files when allowJs is true.
 
 // @allowJs: true
+// @allowTs: true
 
 // @Filename: test0.ts
 //// import * as foo1 from ".//*import_as0*/

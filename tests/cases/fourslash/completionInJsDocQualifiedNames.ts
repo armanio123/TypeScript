@@ -1,6 +1,7 @@
 /// <reference path="fourslash.ts" />
 
 // @allowJs: true
+// @allowTs: true
 
 // @Filename: /node_modules/foo/index.d.ts
 /////** tee */

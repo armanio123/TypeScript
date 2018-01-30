@@ -1,5 +1,6 @@
 // @module: commonjs
 // @allowJs: true
+// @allowTs: true
 // @outDir: ./out/
 
 // @filename: node.d.ts

@@ -2642,13 +2642,13 @@ namespace ts {
 
     export function getSupportedExtensions(options?: CompilerOptions, extraFileExtensions?: ReadonlyArray<JsFileExtensionInfo>): ReadonlyArray<string> {
 
-        const extensions: string[] = [Extension.Dts];
+        const extensions: string[] = [];
 
         if (!options || options.allowTs || options.allowTs === undefined && options.allowJs === undefined) {
             extensions.push(...supportedTypeScriptExtensions);
         }
         if (options && options.allowJs) {
-            extensions.push(...supportedJavascriptExtensions);
+            extensions.push(...supportedJavascriptExtensions, Extension.Dts);
 
             if (extraFileExtensions && extraFileExtensions.length !== 0) {
                 extensions.push(...extraFileExtensions.map(e => e.extension));

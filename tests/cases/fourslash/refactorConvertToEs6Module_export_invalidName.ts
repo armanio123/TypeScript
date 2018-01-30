@@ -3,6 +3,7 @@
 // Test that we leave it alone if the name is a keyword.
 
 // @allowJs: true
+// @allowTs: true
 
 // @Filename: /a.js
 /////*a*/exports/*b*/.class = 0;

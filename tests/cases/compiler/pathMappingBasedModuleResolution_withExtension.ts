@@ -1,6 +1,7 @@
 // @noImplicitReferences: true
 // @traceResolution: true
 // @allowJs: true
+// @allowTs: true
 
 // @Filename: /foo/foo.ts
 export function foo() {}

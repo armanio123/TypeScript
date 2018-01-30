@@ -175,6 +175,7 @@ namespace ts {
 
             describe(testName, () => {
                 testSuccess("can resolve an extension with a base extension", "tsconfig.json", {
+                    allowTs: true,
                     allowJs: true,
                     noImplicitAny: true,
                     strictNullChecks: true,
@@ -184,6 +185,7 @@ namespace ts {
                 ]);
 
                 testSuccess("can resolve an extension with a base extension that overrides options", "tsconfig.nostrictnull.json", {
+                    allowTs: true,
                     allowJs: true,
                     noImplicitAny: true,
                     strictNullChecks: false,
@@ -225,6 +227,7 @@ namespace ts {
                 }]);
 
                 testSuccess("can overwrite compiler options using extended 'null'", "configs/third.json", {
+                    allowTs: true,
                     allowJs: true,
                     noImplicitAny: true,
                     strictNullChecks: true,
@@ -234,6 +237,7 @@ namespace ts {
                 ]);
 
                 testSuccess("can overwrite top-level options using extended 'null'", "configs/fourth.json", {
+                    allowTs: true,
                     allowJs: true,
                     noImplicitAny: true,
                     strictNullChecks: true,

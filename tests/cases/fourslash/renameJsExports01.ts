@@ -1,6 +1,7 @@
 /// <reference path='fourslash.ts'/>
 
 // @allowJs: true
+// @allowTs: true
 // @Filename: a.js
 ////exports.[|{| "isWriteAccess": true, "isDefinition": true |}area|] = function (r) { return r * r; }
 

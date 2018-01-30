@@ -1,5 +1,6 @@
 // @noImplicitReferences: true
 // @allowJs: true
+// @allowTs: true
 // @traceResolution: true
 // Test the error message if we have `--allowJs` but not `--jsx`.
 

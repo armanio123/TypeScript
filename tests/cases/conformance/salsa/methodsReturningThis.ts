@@ -1,6 +1,7 @@
 // @filename: input.js
 // @out: output.js
 // @allowJs: true
+// @allowTs: true
 function Class()
 {
 }

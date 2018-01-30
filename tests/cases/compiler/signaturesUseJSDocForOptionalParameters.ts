@@ -1,4 +1,5 @@
 // @allowJs: true
+// @allowTs: true
 // @out: out_1.js
 // @filename: jsDocOptionality.js
 function MyClass() {
